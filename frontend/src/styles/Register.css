@@ -1,0 +1,44 @@
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .register-container {
+    max-width: 400px;
+    margin: 4rem auto;
+    padding: 2rem;
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.2);
+  }
+  
+  .register-container h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .register-form input {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+    border: 1px solid #444;
+    background-color: #2c2c2c;
+    color: #fff;
+  }
+  
+  .register-form input::placeholder {
+    color: #bbb;
+  }
+  
+  .register-form input:focus {
+    border-color: #007bff;
+    outline: none;
+    background-color: #333;
+  }
+  
+  button {
+    font-weight: bold;
+  }
+  
