@@ -13,7 +13,7 @@ Dbcon();
 // Enable CORS with credentials
 app.use(
   cors({
-    origin:  "http://localhost:5173",
+    origin:  "https://thoughts-tnp.vercel.app",
     credentials: true,
   })
 );
