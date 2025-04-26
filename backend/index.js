@@ -14,6 +14,7 @@ Dbcon();
 app.use(
   cors({
     origin:  "https://thoughts-tnp.vercel.app",
+    methods: ["POST","GET"],
     credentials: true,
   })
 );
@@ -24,7 +25,7 @@ app.use(express.json());
 const port = process.env.PORT || 3000;
 
 app.get("/", (req, res) => {
-  res.send("hello jii ");
+  res.json("hello jii ");
 });
 
 app.use("/auth", AuthRoutes);
