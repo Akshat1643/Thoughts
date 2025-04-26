@@ -129,15 +129,15 @@ const Home2 = () => {
         {/* Notes Grid */}
         <div className="cards mt-5">
           {notes.length ? (
-            <div className="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4">
+            <div className="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4 ">
               {notes.map((note) => (
                 <div className="col" key={note._id}>
-                  <Card bg="dark" text="white">
+                  <Card className="shadow" bg="dark" text="white">
                     <Card.Body>
                       <Card.Title>{note.title}</Card.Title>
                       <Card.Text>{note.body}</Card.Text>
                       <div className="d-flex justify-content-between">
-                        <Button size="sm" variant="warning" onClick={() => openModal(note)}>Edit</Button>
+                        <Button className="text-white" size="sm" variant="warning" onClick={() => openModal(note)}>Edit</Button>
                         <Button size="sm" variant="danger" onClick={() => deleteNote(note._id)}>Delete</Button>
                       </div>
                     </Card.Body>
@@ -161,15 +161,16 @@ const Home2 = () => {
       </section>
 
       {/* Modal */}
-      <Modal show={showModal} onHide={() => setShowModal(false)} dialogClassName="custom-modal">
+      <Modal  show={showModal} onHide={() => setShowModal(false)} dialogClassName="custom-modal">
         <Modal.Header closeButton className="bg-dark text-white">
-          <Modal.Title>{editId ? "Update Note" : "Add Note"}</Modal.Title>
+          <Modal.Title className="text-white">{editId ? "Update Note" : "Add Note"}</Modal.Title>
         </Modal.Header>
-        <Modal.Body className="bg-dark text-white">
+        <Modal.Body>
           <Form>
             <Form.Group className="mb-3">
               <Form.Label>Title</Form.Label>
               <Form.Control
+                className="text-white"
                 type="text"
                 placeholder="Enter title"
                 value={noteData.title}
@@ -179,6 +180,7 @@ const Home2 = () => {
             <Form.Group className="mb-3">
               <Form.Label>Body</Form.Label>
               <Form.Control
+                className="text-white"
                 as="textarea"
                 rows={3}
                 placeholder="Write your note..."

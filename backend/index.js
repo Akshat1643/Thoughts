@@ -13,7 +13,7 @@ Dbcon();
 // Enable CORS with credentials
 app.use(
   cors({
-    origin:  "http://localhost:5173", // change this to your frontend URL
+    origin:  "http://localhost:5173",
     credentials: true,
   })
 );
